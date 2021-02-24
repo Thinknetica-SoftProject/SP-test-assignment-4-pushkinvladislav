@@ -10,4 +10,6 @@
 #
 ## Решение:
 
-
+puts(File.read('data/3.txt').split("\n").map { |string| string.split.map(&:to_i) }.map do |s|
+       s.max - s.min
+     end.sum)

@@ -16,6 +16,5 @@
 #
 ## Решение:
 
-
-
-
+file = File.read('data/1.txt')
+puts(2 * file.scan('(').count - file.length + 1)

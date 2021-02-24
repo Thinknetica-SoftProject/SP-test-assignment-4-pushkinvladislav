@@ -16,4 +16,7 @@
 #
 ## Решение:
 
-
+puts(File.read('data/4.txt').split("\n").map do |present|
+  д, в, ш = present.split('x').map(&:to_i).sort
+  2 * ш * д + 2 * д * в + 2 * в * ш + д * в
+end.sum)

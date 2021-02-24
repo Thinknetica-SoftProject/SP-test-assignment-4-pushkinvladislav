@@ -16,3 +16,13 @@
 #
 ## Решение:
 
+require 'digest'
+
+input = gets.chomp
+i = 0
+puts(
+  loop do
+    i += 1
+    break i if Digest::MD5.hexdigest(input + i.to_s)[0..4] == '00000'
+  end
+)
